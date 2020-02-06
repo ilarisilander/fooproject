@@ -9,22 +9,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                if(Boolean.valueOf(isUnix())) {
-                    sh "mvn compile"
-                }
-                else{
-                    bat "mvn compile"
-                }
+                sh "mvn compile"
+                bat "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                if(Boolean.valueOf(isUnix())) {
-                    sh "mvn compile"
-                 }
-                 else{
-                    bat "mvn compile"
-                 }
+                sh "mvn compile"
+                bat "mvn compile"
             }
             post {
                 always {
