@@ -1,5 +1,4 @@
 pipeline {
-    env.UNIX = isUnix()
     agent any
     stages {
         stage('Checkout') {
@@ -10,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                if(Boolean.valueOf(env.UNIX)) {
+                if(Boolean.valueOf(isUnix())) {
                     sh "mvn compile"
                 }
                 else{
@@ -20,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                if(Boolean.valueOf(env.UNIX)) {
+                if(Boolean.valueOf(isUnix())) {
                     sh "mvn compile"
                  }
                  else{
