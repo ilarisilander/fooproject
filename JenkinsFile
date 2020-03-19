@@ -1,8 +1,4 @@
 pipeline {
-    def os = bat
-    if(isUnix()) {
-        os = sh
-    }
     agent any
     stages {
         stage('Checkout') {
@@ -13,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                os "mvn compile"
+                sh "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                os "mvn compile"
+                sh "mvn compile"
             }
             post {
                 always {
