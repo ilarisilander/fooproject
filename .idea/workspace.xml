@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f992390-60d4-4656-ad7e-2e7947d32b17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Restful Booker.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Restful Booker.postman_environment.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
     </list>
