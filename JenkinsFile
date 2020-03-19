@@ -9,20 +9,20 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "mvn compile"
+                wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+                  sh "mvn compile"
+                }
             }
         }
-        ansiColor('xterm') {
-            stage('Test') {
-                        steps {
-                            sh "mvn test"
-                        }
-                        post {
-                            always {
-                                junit '**/TEST*.xml'
-                            }
-                        }
-                    }
+        stage('Test') {
+            steps {
+                sh "mvn test"
+            }
+            post {
+                always {
+                    junit '**/TEST*.xml'
+                }
+            }
         }
         stage('newman') {
             steps {
