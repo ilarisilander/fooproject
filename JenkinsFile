@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    options {
-        ansiColor('xterm')
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -32,6 +29,7 @@ pipeline {
                 always {
                     junit '**/*xml'
                 }
+                chuckNorris()
             }
         }
         stage('robot') {
