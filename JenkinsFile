@@ -28,8 +28,8 @@ pipeline {
             post {
                 always {
                     junit '**/*xml'
+                    chuckNorris()
                 }
-                chuckNorris()
             }
         }
         stage('robot') {
